@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/main.css">
   </head>
   <body>
     <canvas id="canvas"></canvas>
-    <script src="src/cleanCurve.js" charset="utf-8"></script>
+    <header>
+      <h1>CleanDraw</h1>
+      <h2>Draw Cleaner.</h2>
+      <input type="range" min="0.1" max="10" value="1.1" id="slider">
+      <input type="range" min="1" max="10" value="1" id="tolerance">
+    </header>
+    <script src="src/douglas-peucker.js" charset="utf-8"></script>
+    <script src="src/draw.js" charset="utf-8"></script>
   </body>
 </html>
