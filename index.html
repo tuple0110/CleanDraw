@@ -10,8 +10,14 @@
     <header>
       <h1>CleanDraw</h1>
       <h2>Draw Cleaner.</h2>
+      <h3>선 굵기</h3>
       <input type="range" min="0.1" max="10" value="1.1" id="slider">
+      <h3>보정도</h3>
       <input type="range" min="1" max="10" value="1" id="tolerance">
+      <form id="radio" method="post">
+        <input type="radio" name="lineType" value="curve">곡선
+        <input type="radio" name="lineType" value="straight">직선
+      </form>
     </header>
     <script src="src/douglas-peucker.js" charset="utf-8"></script>
     <script src="src/draw.js" charset="utf-8"></script>
