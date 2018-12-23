@@ -10,27 +10,14 @@ var tolerance = 1;
 canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight * 0.9;
 
-slider.addEventListener("input", () => {
-  ctx.lineWidth = slider.value;
-});
-
-toleranceSlider.addEventListener("input", () => {
-  tolerance = toleranceSlider.value;
-});
-
-addEventListener("resize", () => {
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight * 0.9;
-});
-
-addEventListener("mousedown", (e) => {
+var down = (e) => {
   drawing = true;
   pointList = [];
   ctx.beginPath();
   ctx.moveTo(e.clientX, e.clientY);
-});
+};
 
-addEventListener("mousemove", (e) => {
+var move = (e) => {
   if (drawing) {
     ctx.lineTo(e.clientX, e.clientY);
     ctx.closePath();
@@ -38,9 +25,9 @@ addEventListener("mousemove", (e) => {
     ctx.moveTo(e.clientX, e.clientY);
     pointList.push({x: e.clientX, y: e.clientY});
   }
-});
+};
 
-addEventListener("mouseup", () => {
+var up = () => {
   drawing = false;
   cleanedLine.push([]);
   cleanedLine[cleanedLine.length - 1].push(simplifyPath(pointList, tolerance));
@@ -55,6 +42,21 @@ addEventListener("mouseup", () => {
       ctx.moveTo(cleanedLine[i][0][j].x, cleanedLine[i][0][j].y);
     }
   }
-  console.log(pointList);
-  console.log(cleanedLine);
+};
+
+slider.addEventListener("input", () => {
+  ctx.lineWidth = slider.value;
 });
+
+toleranceSlider.addEventListener("input", () => {
+  tolerance = toleranceSlider.value;
+});
+
+addEventListener("resize", () => {
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight * 0.9;
+});
+
+addEventListener("mousedown", down);
+addEventListener("mousemove", move);
+addEventListener("mouseup", up);
