@@ -6,6 +6,7 @@ var drawing = false;
 var pointList = [];
 var cleanedLine = [];
 var tolerance = 1;
+var tool = "pen";
 
 canvas.width = document.documentElement.clientWidth;
 canvas.height = document.documentElement.clientHeight * 0.9;
