@@ -203,4 +203,4 @@ addEventListener("mouseup", up);
 * Control the pen's thickness with first slider
 * Control the epsilon with second slider
 
-### [Demo Here](https://https://tuple0110.github.io/cleandraw/)
+### [Demo Here](https://tuple0110.github.io/cleandraw/)
