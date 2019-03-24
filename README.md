@@ -1,6 +1,6 @@
 # Clean Draw
-> ## Code
-> * HTML
+## Code
+* HTML
 ```html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -28,7 +28,7 @@
   </body>
 </html>
 ```
-> * CSS
+* CSS
 ```css
 body {
   margin: 0;
@@ -61,7 +61,7 @@ h3 {
   margin-left: 50px;
 }
 ```
-> * JS
+* JS
 ```js
 var simplifyPath = function( points, tolerance ) {
 
@@ -198,9 +198,9 @@ addEventListener("mousemove", move);
 addEventListener("mouseup", up);
 ```
 
-> ## How To Use
-> * Drag your mouse to draw pictures
-> * Control the pen's thickness with first slider
-> * Control the epsilon with second slider
+## How To Use
+* Drag your mouse to draw pictures
+* Control the pen's thickness with first slider
+* Control the epsilon with second slider
 
->[Demo Here](https://https://tuple0110.github.io/cleandraw/)
+### [Demo Here](https://https://tuple0110.github.io/cleandraw/)
